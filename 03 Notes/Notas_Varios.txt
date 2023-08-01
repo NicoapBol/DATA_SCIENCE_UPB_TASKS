@@ -1,0 +1,2 @@
+Como revisar el codigo python desde un metodo visual 
+copiar aqui https://pythontutor.com/visualize.html#mode=edit
