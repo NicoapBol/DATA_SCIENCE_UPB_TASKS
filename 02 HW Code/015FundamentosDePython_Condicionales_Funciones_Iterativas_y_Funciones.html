@@ -1,0 +1,503 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "NEeil5tY0hqo"
+      },
+      "source": [
+        "# UNIDAD 2 - FUNDAMENTOS DE PYTHON\n",
+        "## Condicionales, Funciones Iterativas y Funciones\n",
+        "## Docente: MSc. Ruth Chirinos\n",
+        "## Fecha Entrega: 08/Sept/2023 23:59\n",
+        "\n",
+        "##Referencia: https://www.kaggle.com/learn/python"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9VwIc8IqxZ1E"
+      },
+      "source": [
+        "1. Realizar un programa que almacene las asignaturas de la carrera de Sistemas (por ejemplo Algebra Lineal, Probabilidad Estadistica, Programacion, Algoritmica y Probabilidad) en una lista y la muestre por pantalla."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 10,
+      "metadata": {
+        "id": "zUN-lHJuxO-P"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Programa para almacenar y mostrar asignaturas de la carrera de Ingenieria en Sistemas\n",
+            "\n",
+            "Asignaturas de la carrera de Ingenieria en Sistemas:\n",
+            "1. Calculo I\n",
+            "2. Calculo II\n",
+            "3. Programacion Basica\n",
+            "4. Programacion Avanzada\n",
+            "5. Bases de datos I\n",
+            "6. SQL\n",
+            "7. Etica y Moral \n",
+            "8. x\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Escribe aqui tu respuesta\n",
+        "#Bucle para inputs:\n",
+        "def input_1():\n",
+        "    asignaturas = []\n",
+        "    \n",
+        "    while True:\n",
+        "        materia = input(\"Ingresa materias para la carrera de Ing. en Sistemas o escribe 'show' para mostrar inputs\")\n",
+        "        if materia.lower() == 'show':\n",
+        "         break\n",
+        "        asignaturas.append(materia)\n",
+        "    return asignaturas\n",
+        "\n",
+        "#Display la lista de materias:\n",
+        "def show_asignaturas(asignaturas):\n",
+        "    print(\"\\nAsignaturas de la carrera de Ingenieria en Sistemas:\")\n",
+        "    for i, materia in enumerate(asignaturas, start=1):\n",
+        "        print(f\"{i}. {materia}\")\n",
+        "\n",
+        "#Programa principal:\n",
+        "if __name__ == \"__main__\":\n",
+        "    print(\"Programa para almacenar y mostrar asignaturas de la carrera de Ingenieria en Sistemas\")\n",
+        "    \n",
+        "    asignaturas = input_1()\n",
+        "    show_asignaturas(asignaturas)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rhkHFEs41e55"
+      },
+      "source": [
+        "2. Realizar un programa que almacene las asignaturas de la carrera de Sistemas (por ejemplo Algebra Lineal, Probabilidad Estadistica, Programacion, Algoritmica y Probabilidad) en una lista, pregunte al usuario la nota que ha sacado en cada asignatura, y después las muestre por pantalla con el mensaje: 1) En <b>asignatura</b> has sacado <b>nota</b>\" , donde <b>asignatura</b> es cada una de las asignaturas de la lista y <b>nota</b> cada una de las notas introducidas por el usuario."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {},
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Programa para almacenar y mostrar notas de asignaturas de la carrera de Sistemas\n",
+            "==================================================\n",
+            "Notas obtenidas en las asignaturas: \n",
+            "==================================================\n",
+            "En Calculo I has sacado_____________________*95\n",
+            "En Calculo II has sacado____________________*90\n",
+            "En Ecuaciones Diferenciales has sacado______*89\n",
+            "En Algebra Lineal has sacado________________*90\n",
+            "En Probabilidad y Estadistica I has sacado__*92\n",
+            "En Valores has sacado_______________________*99\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Escribe aqui tu respuesta\n",
+        "# Lista de asignaturas:\n",
+        "def asignaturas_1():\n",
+        "    asignaturas = [\"Calculo I\", \"Calculo II\", \"Ecuaciones Diferenciales\", \"Algebra Lineal\", \"Probabilidad y Estadistica I\",\"Valores\"]\n",
+        "    return asignaturas\n",
+        "\n",
+        "# Input de notas\n",
+        "def input_notas(asignaturas):\n",
+        "    notas = {}\n",
+        "    \n",
+        "    for i in asignaturas:\n",
+        "        nota = input(f\"Ingresa la nota que has sacado en {i}: \")\n",
+        "        notas[i] = nota\n",
+        "    \n",
+        "    return notas\n",
+        "\n",
+        "# Mostrar notas:\n",
+        "def display_notas(notas):\n",
+        "    print(\"=\"*50)\n",
+        "    print(\"Notas obtenidas en las asignaturas: \")\n",
+        "    print(\"=\"*50)\n",
+        "    for asignatura, nota in notas.items():\n",
+        "        espacios = \"_\" * (30 - len(asignatura))\n",
+        "        print(f\"En {asignatura} has sacado{espacios}*{nota}\")\n",
+        "\n",
+        "# Programa principal\n",
+        "if __name__ == \"__main__\":\n",
+        "    print(\"Programa para almacenar y mostrar notas de asignaturas de la carrera de Sistemas\")\n",
+        "    \n",
+        "    asignaturas = asignaturas_1()\n",
+        "    notas = input_notas(asignaturas)\n",
+        "    display_notas(notas)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pOibOS_Y3MJu"
+      },
+      "source": [
+        "3. Realizar un programa que almacene los siguientes vectores (2,-4,6) y (-1,8,0) en dos listas y muestre por pantalla su producto escalar."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "id": "pY1aVBTZ2qNn"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "-34\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Escribe aqui tu respuesta\n",
+        "M = 'ERROR!: los vectores no tienen la misma notacion'\n",
+        "def logica_pe(vector1, vector2):\n",
+        "    if len(vector1) != len(vector2):\n",
+        "        return M\n",
+        "    \n",
+        "    resultado = 0\n",
+        "    for i in range(len(vector1)):\n",
+        "        resultado += vector1[i] * vector2[i]\n",
+        "    \n",
+        "    return resultado\n",
+        "\n",
+        "vector1 = [2, -4, 6]\n",
+        "vector2 = [-1, 8, 0]\n",
+        "\n",
+        "producto_escalar = logica_pe(vector1, vector2)\n",
+        "print(producto_escalar)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qgfnc5xR59UW"
+      },
+      "source": [
+        "4. Realizar un programa que pregunte al usuario su nombre, edad, dirección y equipo de futbol favorito y lo guarde en un diccionario. Después debe mostrar por pantalla el mensaje `<nombre> tiene <edad> años, vive en <dirección> y su quipo de futbol favorito es <equipoFutbol>`.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "id": "PkWiFmfY6QlU"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Nicolas Acha tiene 26 años, vive en Santa Cruz, Bolivia y su equipo de fútbol favorito es Bayer Munich.\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Escribe aqui tu respuesta\n",
+        "nombre = input(\"Type nombre\")\n",
+        "edad = input(\"Type edad\")\n",
+        "direccion = input(\"Type direccion\")\n",
+        "equipo_futbol = input(\"Type nombre equipo futbol favorito\")\n",
+        "\n",
+        "# Crear un diccionario con la información\n",
+        "usuario_info = {\n",
+        "    'nombre': nombre,\n",
+        "    'edad': edad,\n",
+        "    'direccion': direccion,\n",
+        "    'equipo_futbol': equipo_futbol\n",
+        "}\n",
+        "\n",
+        "# Mostrar la información por pantalla\n",
+        "print(f\"{usuario_info['nombre']} tiene {usuario_info['edad']} años, vive en {usuario_info['direccion']} y su equipo de fútbol favorito es {usuario_info['equipo_futbol']}.\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pn399Mme6uWU"
+      },
+      "source": [
+        "5. Realizar un programa que simule una cesta de compra en un supermercado creando un diccionario. El programa debe preguntar el artículo y su precio y añadir el par al diccionario, hasta que el usuario decida terminar. Después se debe mostrar por pantalla la lista de la compra y el coste total, con el siguiente formato\n",
+        "\n",
+        "|Lista de la compra| |\n",
+        "|:-|-:|\n",
+        "|Artículo 1 | Precio|\n",
+        "|Artículo 2 | Precio|\n",
+        "|Artículo 3 | Precio|\n",
+        "|...| ...|\n",
+        "|Total| Coste|"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "id": "ACoPnEfo6woq"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "| LISTA DE COMPRAS |\n",
+            "=================================================================================\n",
+            "|               ARTICULO               |                PRECIO                |\n",
+            "Mantequilla ___________________________|____________________________________9.0|\n",
+            "Cafe___________________________________|___________________________________10.0|\n",
+            "Huevos ________________________________|___________________________________20.0|\n",
+            "Tocino_________________________________|___________________________________26.0|\n",
+            "Pan____________________________________|____________________________________5.0|\n",
+            "---------------------------------------------------------------------------------\n",
+            "|                 TOTAL                |                                   70.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Escribe aqui tu respuesta\n",
+        "\n",
+        "def lista_compras(Compras):\n",
+        "    print(\"| LISTA DE COMPRAS |\")\n",
+        "    print(\"=\"*81)\n",
+        "    space= \" \"*15\n",
+        "    print(f'|{space}ARTICULO{space}|{space} PRECIO {space}|')\n",
+        "    total = 0\n",
+        "    \n",
+        "    for i, (articulo, precio) in enumerate(lista_compra.items(), start=1):\n",
+        "        space_articulo= \"_\"*(39-len(articulo))\n",
+        "        space_price= \"_\"*(39-len(str(precio)))\n",
+        "        space_total= \" \"*(39-len(str(total)))\n",
+        "        print(f\"{articulo}{space_articulo}|{space_price}{precio}|\")\n",
+        "        total += precio\n",
+        "    \n",
+        "    print(\"-\"*81)\n",
+        "    print(f'|{space}  TOTAL {space}|{space_total}{total}')\n",
+        "\n",
+        "# Programa principal\n",
+        "if __name__ == \"__main__\":\n",
+        "    lista_compra = {}\n",
+        "    \n",
+        "    while True:\n",
+        "        articulo = input(\"Ingresa el nombre del articulo o x para terminar\")\n",
+        "        if articulo.lower() == 'x':\n",
+        "            break\n",
+        "        \n",
+        "        try:\n",
+        "            precio = float(input(f\"Ingresa el precio de {articulo}: \"))\n",
+        "            lista_compra[articulo] = precio\n",
+        "        except ValueError:\n",
+        "            print(\"Ingresa un numero valido para el precio\")\n",
+        "    \n",
+        "    lista_compras(lista_compra)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-08M8ttP8wNB"
+      },
+      "source": [
+        "6. Realizar un programa que administre las facturas pendientes de cobro de una empresa. Las facturas se almacenarán en un diccionario donde la clave de cada factura será el número de factura y el valor el coste de la factura. El programa debe preguntar al usuario si quiere añadir una nueva factura, pagar una existente o terminar. Si desea añadir una nueva factura se preguntará por el número de factura y su coste y se añadirá al diccionario. Si se desea pagar una factura se preguntará por el número de factura y se eliminará del diccionario. Después de cada operación el programa debe mostrar por pantalla la cantidad cobrada hasta el momento y la cantidad pendiente de cobro."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 13,
+      "metadata": {
+        "id": "0zw6MuRJ_Oxd"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Factura 3 pagada por un total de 400.0\n",
+            "ERROR: Por favor, selecciona una accion valida.\n",
+            "Estado de las facturas:\n",
+            "Total cobrado: 500.0\n",
+            "Total pendiente de cobro: 0.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Escribe aqui tu respuesta\n",
+        "def estado_facturas(facturas):\n",
+        "    cobrado = sum(facturas.values())\n",
+        "    pendiente = sumar_total_facturas - cobrado\n",
+        "    \n",
+        "    print(\"Estado de las facturas:\")\n",
+        "    print(f\"Total cobrado: {cobrado}\")\n",
+        "    print(f\"Total pendiente de cobro: {pendiente}\")\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    facturas = {}\n",
+        "    \n",
+        "    while True:\n",
+        "\n",
+        "        \n",
+        "        action = input(\"Pulsa el numero de una accion: 1. Añadir una nueva factura, 2. Pagar una factura existente,3. Mostrar estado de las facturas o 4 o x para terminar\")\n",
+        "        \n",
+        "        if action == '1':\n",
+        "            numero_factura = input(\"Ingresa el numero de factura: \")\n",
+        "            costo_factura = float(input(\"Ingresa el costo de la factura: \"))\n",
+        "            facturas[numero_factura] = costo_factura\n",
+        "        elif action == '2':\n",
+        "            numero_factura = input(\"Ingresa el numero de factura a pagar: \")\n",
+        "            if numero_factura in facturas:\n",
+        "                costo_factura = facturas.pop(numero_factura)\n",
+        "                print(f\"Factura {numero_factura} pagada por un total de {costo_factura}\")\n",
+        "            else:\n",
+        "                print(f\"La factura {numero_factura} no existe.\")\n",
+        "        elif action == '3':\n",
+        "            sumar_total_facturas = sum(facturas.values())\n",
+        "            estado_facturas(facturas)\n",
+        "        elif action == '4':\n",
+        "            break\n",
+        "        elif action == 'x':\n",
+        "            break\n",
+        "        else:\n",
+        "            print(\"ERROR: Por favor, selecciona una accion valida.\")\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "iz2P39w0_17J"
+      },
+      "source": [
+        "7. Escribir una función a la que se le pase una cadena `<nombre>` y muestre por pantalla el saludo ¡hola `<nombre>`!.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "id": "k8gXHFVH__Q5"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Hola Nicolas Acha!:)\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Escribe aqui tu respuesta\n",
+        "def hi(nombre):\n",
+        "    print(f'Hola {nombre}!:)')\n",
+        "\n",
+        "nombre = input('Ingresa Tu NOMBRE')\n",
+        "hi(nombre)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "HI9vbnUMDr55"
+      },
+      "source": [
+        "8. Realizar una función que reciba una muestra de números en una lista y devuelva otra lista con sus cuadrados."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "id": "YFIoP-TlEDYg"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Muestra de numeros: [15, 20, 5, 8, 25, 78]\n",
+            "Cuadrados de la muestra: [225, 400, 25, 64, 625, 6084]\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Logica\n",
+        "def sqr(numbers):\n",
+        "    rsqrt = [i ** 2 for i in numbers ]\n",
+        "    return rsqrt\n",
+        "\n",
+        "def input_numbers():\n",
+        "    numbers = []\n",
+        "    \n",
+        "    while True:\n",
+        "        number = input(\"Ingresa un numero o 'x' para calcular los cuadrados: \")\n",
+        "        if number.lower() == 'x':\n",
+        "            break\n",
+        "        try:\n",
+        "            number = int(number)\n",
+        "            numbers.append(number)\n",
+        "        except ValueError:\n",
+        "            print(\"ERROR: Utiliza numeros enteros unicamente\")\n",
+        "    \n",
+        "    return numbers\n",
+        "\n",
+        "#Programa\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    muestra_numeros = input_numbers()\n",
+        "    cuadrados = sqr(muestra_numeros)\n",
+        "    \n",
+        "    print(\"Muestra de numeros:\", muestra_numeros)\n",
+        "    print(\"Cuadrados de la muestra:\", cuadrados)\n",
+        "\n"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.10.11"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
