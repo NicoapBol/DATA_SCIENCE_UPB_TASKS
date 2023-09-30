@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1892e6c66a0f8a90ef03ace439a4c29a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1892e6c66a0f8a90ef03ace439a4c29a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1892e6c66a0f8a90ef03ace439a4c29a = L.map(
+                "map_1892e6c66a0f8a90ef03ace439a4c29a",
+                {
+                    center: [-17.0568, -64.9916],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8bf50c58cee48be67082eefa0116645f = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1892e6c66a0f8a90ef03ace439a4c29a);
+        
+    
+            var marker_fc2e91fe7a7fda489d65481aada2510a = L.marker(
+                [-19.0333, -65.2627],
+                {}
+            ).addTo(map_1892e6c66a0f8a90ef03ace439a4c29a);
+        
+    
+            var icon_0e832a5501fe000d7f512c2568d2c44a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fc2e91fe7a7fda489d65481aada2510a.setIcon(icon_0e832a5501fe000d7f512c2568d2c44a);
+        
+    
+        var popup_2d51465479add3314511fb3fe99db22b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c946122d39a5f9a0513363f85425ff1 = $(`<div id="html_7c946122d39a5f9a0513363f85425ff1" style="width: 100.0%; height: 100.0%;">Sucre, Chuquisaca</div>`)[0];
+                popup_2d51465479add3314511fb3fe99db22b.setContent(html_7c946122d39a5f9a0513363f85425ff1);
+            
+        
+
+        marker_fc2e91fe7a7fda489d65481aada2510a.bindPopup(popup_2d51465479add3314511fb3fe99db22b)
+        ;
+
+        
+    
+    
+            var marker_c11ac94822e70ae1a38d0b8197935e8b = L.marker(
+                [-16.5, -68.15],
+                {}
+            ).addTo(map_1892e6c66a0f8a90ef03ace439a4c29a);
+        
+    
+            var icon_f37f4a2ed720ed786fb6d4ef1792e083 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c11ac94822e70ae1a38d0b8197935e8b.setIcon(icon_f37f4a2ed720ed786fb6d4ef1792e083);
+        
+    
+        var popup_2cf7cfadcc252678c6041c151bbc0bb0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ea768b6094e858dc59e394d1694a8e7 = $(`<div id="html_6ea768b6094e858dc59e394d1694a8e7" style="width: 100.0%; height: 100.0%;">N. Senora de LPz, La Paz</div>`)[0];
+                popup_2cf7cfadcc252678c6041c151bbc0bb0.setContent(html_6ea768b6094e858dc59e394d1694a8e7);
+            
+        
+
+        marker_c11ac94822e70ae1a38d0b8197935e8b.bindPopup(popup_2cf7cfadcc252678c6041c151bbc0bb0)
+        ;
+
+        
+    
+    
+            var marker_b78661fb88e36c817b89d7fdbe20f6ae = L.marker(
+                [-16.5, -68.15],
+                {}
+            ).addTo(map_1892e6c66a0f8a90ef03ace439a4c29a);
+        
+    
+            var icon_49ca5259fd4f8d8c31235cbb7a8ee922 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b78661fb88e36c817b89d7fdbe20f6ae.setIcon(icon_49ca5259fd4f8d8c31235cbb7a8ee922);
+        
+    
+        var popup_55bfc66c2f1555fcc5dad4fc3d8c64c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f97955d8f35a5a670614c85f98c3d15 = $(`<div id="html_7f97955d8f35a5a670614c85f98c3d15" style="width: 100.0%; height: 100.0%;">El Alto, La Paz</div>`)[0];
+                popup_55bfc66c2f1555fcc5dad4fc3d8c64c9.setContent(html_7f97955d8f35a5a670614c85f98c3d15);
+            
+        
+
+        marker_b78661fb88e36c817b89d7fdbe20f6ae.bindPopup(popup_55bfc66c2f1555fcc5dad4fc3d8c64c9)
+        ;
+
+        
+    
+    
+            var marker_1746dfbc2dfa85b3b2771cf18696d1b6 = L.marker(
+                [-17.7833, -63.1833],
+                {}
+            ).addTo(map_1892e6c66a0f8a90ef03ace439a4c29a);
+        
+    
+            var icon_7fa00534d03cd26e86db69c8df2f47b4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1746dfbc2dfa85b3b2771cf18696d1b6.setIcon(icon_7fa00534d03cd26e86db69c8df2f47b4);
+        
+    
+        var popup_78a07b692910f37085298672a45cda6b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f5f7249940b3331ce3abe3e5190aec6f = $(`<div id="html_f5f7249940b3331ce3abe3e5190aec6f" style="width: 100.0%; height: 100.0%;">Santa Cruz de la Sierra, Santa Cruz</div>`)[0];
+                popup_78a07b692910f37085298672a45cda6b.setContent(html_f5f7249940b3331ce3abe3e5190aec6f);
+            
+        
+
+        marker_1746dfbc2dfa85b3b2771cf18696d1b6.bindPopup(popup_78a07b692910f37085298672a45cda6b)
+        ;
+
+        
+    
+    
+            var marker_e7e581453ffc70be455ef6f86f0dacd4 = L.marker(
+                [-17.35, -63.25],
+                {}
+            ).addTo(map_1892e6c66a0f8a90ef03ace439a4c29a);
+        
+    
+            var icon_fc1b354785923c02dee96a7d324274bd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e7e581453ffc70be455ef6f86f0dacd4.setIcon(icon_fc1b354785923c02dee96a7d324274bd);
+        
+    
+        var popup_799a9f3df02fff339123ff1770ac0953 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b43c139e6b8c1e130d9a85c4cf42110 = $(`<div id="html_9b43c139e6b8c1e130d9a85c4cf42110" style="width: 100.0%; height: 100.0%;">Montero, Santa Cruz</div>`)[0];
+                popup_799a9f3df02fff339123ff1770ac0953.setContent(html_9b43c139e6b8c1e130d9a85c4cf42110);
+            
+        
+
+        marker_e7e581453ffc70be455ef6f86f0dacd4.bindPopup(popup_799a9f3df02fff339123ff1770ac0953)
+        ;
+
+        
+    
+    
+            var marker_89f104ac0609acc676c33cbd91f4bbd8 = L.marker(
+                [-17.85, -63.1167],
+                {}
+            ).addTo(map_1892e6c66a0f8a90ef03ace439a4c29a);
+        
+    
+            var icon_52fd5715134f69876330bb3e8a557860 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_89f104ac0609acc676c33cbd91f4bbd8.setIcon(icon_52fd5715134f69876330bb3e8a557860);
+        
+    
+        var popup_cdd45328e36012e83972a20dc0da10bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_74467895a80680ab567ad3c967d91e0a = $(`<div id="html_74467895a80680ab567ad3c967d91e0a" style="width: 100.0%; height: 100.0%;">La Guardia, Santa Cruz</div>`)[0];
+                popup_cdd45328e36012e83972a20dc0da10bd.setContent(html_74467895a80680ab567ad3c967d91e0a);
+            
+        
+
+        marker_89f104ac0609acc676c33cbd91f4bbd8.bindPopup(popup_cdd45328e36012e83972a20dc0da10bd)
+        ;
+
+        
+    
+    
+            var marker_628c7d8d4bcbcfa8bde9f6d066aea1dd = L.marker(
+                [-21.5167, -64.7333],
+                {}
+            ).addTo(map_1892e6c66a0f8a90ef03ace439a4c29a);
+        
+    
+            var icon_56e7357cd6cc1632e7749e22f89d018d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_628c7d8d4bcbcfa8bde9f6d066aea1dd.setIcon(icon_56e7357cd6cc1632e7749e22f89d018d);
+        
+    
+        var popup_a7e14938744c0b724fcc597bb1c49ed4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df3dd8027b99251799996bdb68a264d5 = $(`<div id="html_df3dd8027b99251799996bdb68a264d5" style="width: 100.0%; height: 100.0%;">Tarija, Tarija</div>`)[0];
+                popup_a7e14938744c0b724fcc597bb1c49ed4.setContent(html_df3dd8027b99251799996bdb68a264d5);
+            
+        
+
+        marker_628c7d8d4bcbcfa8bde9f6d066aea1dd.bindPopup(popup_a7e14938744c0b724fcc597bb1c49ed4)
+        ;
+
+        
+    
+</script>
+</html>
